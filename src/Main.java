@@ -8,13 +8,13 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		int option = 0;
 		
-		System.out.print("Introduce tu nombre: ");
+		System.out.println("Introduce tu nombre: ");
 		String nombre = sc.next();
 		
-		System.out.print("Introduce tu edad: ");
+		System.out.println("Introduce tu edad: ");
 		int edad = sc.nextInt();
 		
-		System.out.print("Introduce tu DNI: ");
+		System.out.println("Introduce tu DNI: ");
 		String dni = sc.next();
 		
 		
@@ -56,7 +56,7 @@ public class Main {
 					cant = sc.nextDouble();
 					
 					System.out.println("Concepto: ");
-					desc = sc.next();
+					desc = sc.nextLine();
 					
 					miCuenta.addIngresos(desc, cant);
 					break;
