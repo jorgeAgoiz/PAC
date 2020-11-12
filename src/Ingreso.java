@@ -7,7 +7,7 @@ public class Ingreso extends Dinero {
 	
 	
 	public String toString() {
-		return "Ingreso [ dinero = " + dinero + ", description = " + description + " ]";
+		return " Ingreso [ dinero = " + dinero + ", description = " + description + " ]\n";
 	};	
 	
 }
