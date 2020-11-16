@@ -3,13 +3,13 @@ import java.util.*;
 
 public class Cuenta {
 	
-	//Variables
+	//VARIABLES
 	private double saldo;
 	private Usuario usuario;
 	private List<Gasto> gastos;
 	private List<Ingreso> ingresos;
 	
-	//Constructor
+	//CONSTRUCTOR
 	public Cuenta(Usuario usuario){
 		this.usuario = usuario;
 		this.saldo = 0;
@@ -17,7 +17,7 @@ public class Cuenta {
 		this.ingresos = new ArrayList<Ingreso>();
 	};
 	
-	//Getters y Setters
+	//GETTERS Y SETTERS
 	public double getSaldo() {
 		return this.saldo;
 	};
@@ -31,11 +31,19 @@ public class Cuenta {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-
 	
+	public List<Ingreso> getIngresos(){
+		return this.ingresos;
+	};
+	
+	public List<Gasto> getGastos() {
+		return this.gastos;
+	};
+
+	//METODOS ESPECIALES
 	public double addIngresos(String description, double cantidad) {
 		Ingreso ingreso = new Ingreso(cantidad, description);
-		ingresos.add(ingreso);
+		this.ingresos.add(ingreso);
 		this.saldo += cantidad;
 		
 		return this.saldo;
@@ -50,7 +58,7 @@ public class Cuenta {
 			};
 			
 			Gasto gasto = new Gasto(cantidad, description);
-			gastos.add(gasto);
+			this.gastos.add(gasto);
 			this.saldo -= cantidad;
 			return this.saldo;
 			
@@ -61,15 +69,7 @@ public class Cuenta {
 		
 	};
 	
-	public List<Ingreso> getIngresos(){
-		return this.ingresos;
-	};
-	
-	public List<Gasto> getGastos() {
-		return this.gastos;
-	};
-	
-	
+	//METODO TO STRING
 	public String toString() {
 		return this.usuario.toString() + "\n" + this.saldo;
 	};

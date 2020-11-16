@@ -1,16 +1,10 @@
 
 public abstract class Dinero {
-	//Variables
+	//VARIABLES
 	protected double dinero;
 	protected String description;
 	
-	//Consutructores
-	public Dinero(double dinero, String description) {
-		this.dinero = dinero;
-		this.description = description;
-	};
-	
-	//Gets y Sets
+	//GETTERS Y SETTERS
 	public double getDinero() {
 		return this.dinero;
 	}
