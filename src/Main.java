@@ -70,37 +70,34 @@ public class Main {
 		do {
 			//LLAMAMOS AL METODO PARA MOSTRAR LAS OPCIONES
 			option = mostrarOpciones();
-			
-			switch( option ) {
+			switch( option ) {//SWITCH PARA LAS OPCIONES DISPONIBLES
 			
 				case 1:
-					
 					System.out.println("Detalles del gasto.");
 					System.out.println("Concepto: ");
 					
-					do {
+					do {//MIENTRAS NO SE INTRODUZCA CONCEPTO
 						desc = sc.nextLine();
 					}while(desc.isEmpty());
 					
 					System.out.println("Cantidad: ");
 					cant = sc.nextDouble();
 						
-					miCuenta.addGastos(desc, cant);
+					miCuenta.addGastos(desc, cant);//AÑADIMOS EL GASTO
 					break;
 					
 				case 2:
-					
 					System.out.println("Detalles del ingreso.");
 					System.out.println("Concepto: ");
 					
-					do {
+					do {//MIENTRAS NO SE INTRODUZCA CONCEPTO
 						desc = sc.nextLine();
 					}while(desc.isEmpty());
 					
 					System.out.println("Cantidad: ");
 					cant = sc.nextDouble();		
 						
-					miCuenta.addIngresos(desc, cant);
+					miCuenta.addIngresos(desc, cant);//AÑADIMOS EL INGRESO
 					break;
 					
 				case 3:
@@ -114,22 +111,22 @@ public class Main {
 					break;
 					
 				case 5:
-					System.out.println("Saldo actual: ");
 					System.out.println(miCuenta.toString());
 					break;
+					
 				case 0:
 					System.out.println("Fin del programa.");
-					System.out.println("Gracias por usar la aplicaciï¿½n.");
+					System.out.println("Gracias por usar la aplicacion.");
 					break;
+					
 				default:
 					System.out.println("Opcion desconocida.");
-					
+					break;
 				}
 					
-		} while(option != 0);
+		} while(option != 0);//MIENTRAS LA OPCION SELECCIONADA NO SEA 0 SEGUIMOS MOSTRANDO EL MENU DE OPCIONES
 		
-		sc.close();
-		
+		sc.close();//CERRAMOS SCANNER
 	}
 
 }

@@ -1,5 +1,6 @@
 
-public class Usuario {
+public class Usuario {//CLASE USUARIO
+	
 	//VARIABLES
 	private String nombre;
 	private int edad;
@@ -38,8 +39,8 @@ public class Usuario {
 	//METODO SET ESPECIAL
 	public boolean setDNI(String DNI) {
 		
-		if( DNI.matches("^[0-9]{8}[a-zA-Z]$") || DNI.matches("^[0-9]{8}[-][a-zA-Z]$" )){
-            this.DNI = DNI;
+		if( DNI.matches("^[0-9]{8}[a-zA-Z]$") || DNI.matches("^[0-9]{8}[-][a-zA-Z]$" )){//Indicamos los caracteres validos
+            this.DNI = DNI;//Si son validos seteamos el DNI
             return true;
         } else {
             return false;
@@ -48,7 +49,7 @@ public class Usuario {
 	
 	//METODO TO STRING
 	public String toString() {
-		return "Usuario [ nombre = " + nombre + ", edad = " + edad + ", DNI = " + DNI + "]";
+		return "Usuario: [ nombre = " + nombre + ", edad = " + edad + ", DNI = " + DNI + "]";
 	};
 	
 	

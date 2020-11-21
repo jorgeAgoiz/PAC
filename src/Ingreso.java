@@ -8,7 +8,7 @@ public class Ingreso extends Dinero {
 	
 	@Override
 	public String toString() {
-		return " Ingreso [ dinero : " + dinero + ", description : " + description + " ]\n";
+		return "INGRESO ==> dinero : " + dinero + ", description : " + description + " \n";
 	};	
 	
 }
